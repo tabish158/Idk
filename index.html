@@ -9,9 +9,10 @@
 </head>
 <body>
     <h1>Welcome to Tours and Travels</h1>
-    
+
     <!-- Agra Tour -->
     <div class="tour">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Taj_Mahal_in_Agra.jpg" alt="Agra Tour" class="tour-image">
         <h2>Agra Tours</h2>
         <p><i>Price: £10 per person</i></p>
         <button class="buy-now" onclick="openBookingPage('Agra')">Buy Now</button>
@@ -19,6 +20,7 @@
 
     <!-- Golden Temple Tour -->
     <div class="tour">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d2/Golden_Temple_in_Amritsar.jpg" alt="Golden Temple" class="tour-image">
         <h2>Golden Temple Tours</h2>
         <p><i>Price: £24.99 per person</i></p>
         <button class="buy-now" onclick="openBookingPage('Golden Temple')">Buy Now</button>
@@ -26,6 +28,7 @@
 
     <!-- Taj Mahal Tour -->
     <div class="tour">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Taj_Mahal.jpg" alt="Taj Mahal" class="tour-image">
         <h2>Taj Mahal Tours</h2>
         <p><i>Price: £8.99 per person</i></p>
         <button class="buy-now" onclick="openBookingPage('Taj Mahal')">Buy Now</button>
@@ -33,6 +36,7 @@
 
     <!-- Delhi & Agra Tour -->
     <div class="tour">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/India_Gate_-_Delhi.jpg" alt="Delhi & Agra Tour" class="tour-image">
         <h2>Delhi & Agra Tour</h2>
         <p><i>Price: £25 per person</i></p>
         <button class="buy-now" onclick="openBookingPage('Delhi & Agra')">Buy Now</button>
@@ -40,9 +44,41 @@
 
     <!-- Customisable Tour -->
     <div class="tour">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Chichen_Itza_-_Panoramic_View.jpg" alt="Customisable Tour" class="tour-image">
         <h2>Customisable Tours</h2>
         <p><i>Price: Varies</i></p>
         <button class="buy-now" onclick="openBookingPage('Customisable')">Buy Now</button>
+    </div>
+
+    <!-- Booking Page Section (Hidden) -->
+    <div id="booking-page" class="hidden">
+        <h2>Booking Details</h2>
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" required>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="num-people">Number of People:</label>
+            <button type="button" class="adjust-btn" onclick="adjustPeople('decrease')">-</button>
+            <input type="number" id="num-people" value="1" min="1" required>
+            <button type="button" class="adjust-btn" onclick="adjustPeople('increase')">+</button>
+
+            <label for="pickup-location">Pickup Location:</label>
+            <input type="text" id="pickup-location" required>
+
+            <button type="submit">Proceed to Payment</button>
+        </form>
     </div>
 </body>
 </html>
